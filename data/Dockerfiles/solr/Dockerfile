@@ -1,4 +1,4 @@
-FROM arm64v8/solr:7.7
+FROM arm64v8/solr:latest
 
 USER root
 

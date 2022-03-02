@@ -1,4 +1,4 @@
-FROM debian:bullseye-slim
+FROM arm64v8/debian:bullseye-slim
 
 LABEL maintainer "André Peters <andre.peters@servercow.de>"
 

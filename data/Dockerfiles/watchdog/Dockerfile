@@ -1,4 +1,4 @@
-FROM alpine:3.15
+FROM arm64v8/alpine:3.15
 LABEL maintainer "André Peters <andre.peters@servercow.de>"
 
 # Installation

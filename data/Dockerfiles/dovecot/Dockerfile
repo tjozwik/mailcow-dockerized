@@ -1,4 +1,4 @@
-FROM debian:buster-slim
+FROM arm64v8/debian:buster-slim
 LABEL maintainer "Andre Peters <andre.peters@servercow.de>"
 
 ARG DEBIAN_FRONTEND=noninteractive

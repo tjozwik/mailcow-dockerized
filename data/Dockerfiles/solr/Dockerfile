@@ -1,4 +1,4 @@
-FROM solr:7.7-slim
+FROM arm64v8/solr:7.7-slim
 
 USER root
 
@@ -22,9 +22,9 @@ RUN dpkgArch="$(dpkg --print-architecture | awk -F- '{ print $NF }')" \
   && chmod +x /solr.sh \
   && sync \
   && bash /solr.sh --bootstrap
-  
+
 RUN zip -q -d /opt/solr/server/lib/ext/log4j-core-*.jar org/apache/logging/log4j/core/lookup/JndiLookup.class
 
-RUN apt remove zip -y  
+RUN apt remove zip -y
 
 CMD ["/solr.sh"]

@@ -1,5 +1,5 @@
 ARG version=cli
-FROM php:$version
+FROM arm64v8/php:$version
 
 COPY . /var/www
 WORKDIR /var/www

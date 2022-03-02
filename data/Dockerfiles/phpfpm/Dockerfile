@@ -1,4 +1,4 @@
-FROM php:8.0-fpm-alpine3.14
+FROM arm64v8/php:8.0-fpm-alpine3.14
 LABEL maintainer "Andre Peters <andre.peters@servercow.de>"
 
 ENV APCU_PECL 5.1.20
@@ -59,7 +59,7 @@ RUN apk add -U --no-cache autoconf \
   && pecl clear-cache \
   && docker-php-ext-configure intl \
   && docker-php-ext-configure exif \
-  && docker-php-ext-configure gd --with-freetype=/usr/include/ \  
+  && docker-php-ext-configure gd --with-freetype=/usr/include/ \
     --with-jpeg=/usr/include/ \
   && docker-php-ext-install -j 4 exif gd gettext intl ldap opcache pcntl pdo pdo_mysql pspell soap sockets zip bcmath gmp \
   && docker-php-ext-configure imap --with-imap --with-imap-ssl \

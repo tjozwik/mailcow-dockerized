@@ -24,7 +24,7 @@ set -e
 # fixing volume permission
 [[ -d /opt/solr/server/solr/dovecot-fts/data ]] && chown -R solr:solr /opt/solr/server/solr/dovecot-fts/data
 if [[ "${1}" != "--bootstrap" ]]; then
-  sed -i '/SOLR_HEAP=/c\SOLR_HEAP="'${SOLR_HEAP:-1024}'m"' /opt/solr/bin/solr.in.sh
+  sed -i '/SOLR_HEAP=/c\SOLR_HEAP="'${SOLR_HEAP:-4096}'m"' /opt/solr/bin/solr.in.sh
 else
   sed -i '/SOLR_HEAP=/c\SOLR_HEAP="256m"' /opt/solr/bin/solr.in.sh
 fi

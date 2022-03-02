@@ -1,4 +1,4 @@
-FROM arm64v8/debian:bullseye-slim
+FROM arm64v8/debian:bookworm-slim
 LABEL maintainer "Andre Peters <andre.peters@servercow.de>"
 
 ARG DEBIAN_FRONTEND=noninteractive

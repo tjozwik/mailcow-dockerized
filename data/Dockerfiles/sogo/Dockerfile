@@ -20,7 +20,7 @@ RUN echo "Building from repository $SOGO_DEBIAN_REPOSITORY" \
   syslog-ng-core \
   syslog-ng-mod-redis \
   dirmngr \
-  nc \
+  netcat-openbsd \
   psmisc \
   wget \
   patch \
